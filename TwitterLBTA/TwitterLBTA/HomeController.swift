@@ -10,9 +10,11 @@ import UIKit
 
 class WorldCell: UICollectionViewCell {
     
+    let ciao = ["io", "mi", "Chiamo", "Edoardo", "de", "Cal"]
+    
     let wordLabel: UILabel = {
         let label = UILabel()
-        label.text = "Edo Edo Edo"
+        label.text = "Ciao"
         return label
     }()
     
