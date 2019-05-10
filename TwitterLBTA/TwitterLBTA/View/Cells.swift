@@ -33,18 +33,49 @@ class UserCell: DatasourceCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "TestTestTest"
+        label.backgroundColor = .green
         return label
     }()
     
+    let profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .red
+        return imageView
+    }()
+    
+    let userNameLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .purple
+        label.text = "@username"
+        return label
+    }()
+    
+    let bioTextBiew: UITextView = {
+        let textView = UITextView()
+        textView.backgroundColor = .yellow
+        return textView
+    }()
+    
+    
     override func setupViews() {
         super.setupViews()
-        backgroundColor = .yellow
+        
+        addSubview(profileImageView)
         addSubview(nameLabel)
-        nameLabel.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        nameLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        nameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        addSubview(userNameLabel)
+        addSubview(bioTextBiew)
+
+        profileImageView.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
+
+        nameLabel.anchor(profileImageView.topAnchor, left: profileImageView.rightAnchor, bottom: nil, right: self.rightAnchor, topConstant: 0, leftConstant:
+            8, bottomConstant: 0, rightConstant: 12, widthConstant: 0, heightConstant: 20)
+        
+        userNameLabel.anchor(nameLabel.bottomAnchor, left: profileImageView.rightAnchor, bottom: nil, right: nameLabel.rightAnchor, topConstant: 8, leftConstant:
+            8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
+        
+        bioTextBiew.anchor(userNameLabel.bottomAnchor, left: profileImageView.rightAnchor, bottom: nil, right: nameLabel.rightAnchor, topConstant: 8, leftConstant:
+            8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 50)
         
     }
 }
