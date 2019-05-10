@@ -12,6 +12,8 @@
 		11DD18CA2280993F00CEFC2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11DD18C82280993F00CEFC2F /* LaunchScreen.storyboard */; };
 		11DD18D22280D4AC00CEFC2F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD18D12280D4AC00CEFC2F /* HomeController.swift */; };
 		11DD18D422822BA000CEFC2F /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD18D322822BA000CEFC2F /* HomeDatasourceController.swift */; };
+		11DD18D92283493F00CEFC2F /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD18D82283493F00CEFC2F /* Cells.swift */; };
+		11DD18DB22834C8000CEFC2F /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD18DA22834C8000CEFC2F /* HomeDatasource.swift */; };
 		842B1BF94490C734B2CD4265 /* Pods_TwitterLBTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECE0A2D9E8B8BF30E19F4FD /* Pods_TwitterLBTA.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 		11DD18CB2280993F00CEFC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11DD18D12280D4AC00CEFC2F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		11DD18D322822BA000CEFC2F /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
+		11DD18D82283493F00CEFC2F /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		11DD18DA22834C8000CEFC2F /* HomeDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
 		D0229E1E4A1D24CECD18A817 /* Pods-TwitterLBTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterLBTA.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterLBTA/Pods-TwitterLBTA.release.xcconfig"; sourceTree = "<group>"; };
 		D18972A60F16B19627797406 /* Pods-TwitterLBTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterLBTA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterLBTA/Pods-TwitterLBTA.debug.xcconfig"; sourceTree = "<group>"; };
 		EECE0A2D9E8B8BF30E19F4FD /* Pods_TwitterLBTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterLBTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,14 +65,40 @@
 		11DD18BE2280993100CEFC2F /* TwitterLBTA */ = {
 			isa = PBXGroup;
 			children = (
+				11DD18D72283492400CEFC2F /* View */,
+				11DD18D62283491800CEFC2F /* Model */,
+				11DD18D52283490400CEFC2F /* Controller */,
 				11DD18BF2280993100CEFC2F /* AppDelegate.swift */,
 				11DD18D12280D4AC00CEFC2F /* HomeController.swift */,
-				11DD18D322822BA000CEFC2F /* HomeDatasourceController.swift */,
 				11DD18C62280993F00CEFC2F /* Assets.xcassets */,
 				11DD18C82280993F00CEFC2F /* LaunchScreen.storyboard */,
 				11DD18CB2280993F00CEFC2F /* Info.plist */,
 			);
 			path = TwitterLBTA;
+			sourceTree = "<group>";
+		};
+		11DD18D52283490400CEFC2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				11DD18D322822BA000CEFC2F /* HomeDatasourceController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		11DD18D62283491800CEFC2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11DD18DA22834C8000CEFC2F /* HomeDatasource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11DD18D72283492400CEFC2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11DD18D82283493F00CEFC2F /* Cells.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4B2CF931AD79F56465563394 /* Frameworks */ = {
@@ -207,7 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DD18DB22834C8000CEFC2F /* HomeDatasource.swift in Sources */,
 				11DD18C02280993100CEFC2F /* AppDelegate.swift in Sources */,
+				11DD18D92283493F00CEFC2F /* Cells.swift in Sources */,
 				11DD18D422822BA000CEFC2F /* HomeDatasourceController.swift in Sources */,
 				11DD18D22280D4AC00CEFC2F /* HomeController.swift in Sources */,
 			);
