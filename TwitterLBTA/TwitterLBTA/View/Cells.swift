@@ -63,29 +63,88 @@ class UserCell: DatasourceCell {
         return button
     }()
     
+    let stackViewUserNames: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 10
+        stackView.distribution = .fillEqually
+        return stackView
+    }()
+    
+    let stackViewNamesButtons: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.spacing = 15
+        stackView.distribution = .fillProportionally
+        return stackView
+    }()
+    
+    let stackViewBioText: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 15
+        stackView.distribution = .fill
+        return stackView
+    }()
+    
+    let stackViewImageProfile: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.spacing = 15
+        stackView.distribution = .fill
+        return stackView
+    }()
+    
     
     override func setupViews() {
         super.setupViews()
         
-        addSubview(profileImageView)
-        addSubview(nameLabel)
-        addSubview(userNameLabel)
-        addSubview(bioTextView)
-        addSubview(followButton)
+        stackViewUserNames.addArrangedSubview(nameLabel)
+        stackViewUserNames.addArrangedSubview(userNameLabel)
+        
+        stackViewNamesButtons.addArrangedSubview(stackViewUserNames)
+        stackViewNamesButtons.addArrangedSubview(followButton)
 
-        profileImageView.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
+        stackViewBioText.addArrangedSubview(stackViewNamesButtons)
+        stackViewBioText.addArrangedSubview(bioTextView)
 
-        nameLabel.anchor(profileImageView.topAnchor, left: profileImageView.rightAnchor, bottom: nil, right: followButton.leftAnchor, topConstant: 0, leftConstant:
-            8, bottomConstant: 0, rightConstant: 12, widthConstant: 0, heightConstant: 20)
+        stackViewImageProfile.addArrangedSubview(profileImageView)
+        stackViewImageProfile.addArrangedSubview(stackViewBioText)
+
         
-        userNameLabel.anchor(nameLabel.bottomAnchor, left: profileImageView.rightAnchor, bottom: nil, right: nameLabel.rightAnchor, topConstant: 8, leftConstant:
-            8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
+        addSubview(stackViewImageProfile)
         
-        bioTextView.anchor(userNameLabel.bottomAnchor, left: profileImageView.rightAnchor, bottom: nil, right: self.rightAnchor, topConstant: 8, leftConstant:
-            8, bottomConstant: 0, rightConstant: 12, widthConstant: 0, heightConstant: 50)
+        followButton.translatesAutoresizingMaskIntoConstraints = false
+        followButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.4).isActive = true
+        stackViewImageProfile.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        profileImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        followButton.anchor(self.topAnchor, left: nil, bottom: bioTextView.topAnchor, right: self.rightAnchor, topConstant: 12, leftConstant:
-            0, bottomConstant: 12, rightConstant: 12, widthConstant: 120, heightConstant: 34)
+        profileImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        profileImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        stackViewImageProfile.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
+        stackViewImageProfile.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
+        stackViewImageProfile.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+        stackViewImageProfile.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
+
+
+//        profileImageView.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
+//
+//        nameLabel.anchor(profileImageView.topAnchor, left: profileImageView.rightAnchor, bottom: nil, right: followButton.leftAnchor, topConstant: 0, leftConstant:
+//            8, bottomConstant: 0, rightConstant: 12, widthConstant: 0, heightConstant: 20)
+//
+//        userNameLabel.anchor(nameLabel.bottomAnchor, left: profileImageView.rightAnchor, bottom: nil, right: nameLabel.rightAnchor, topConstant: 8, leftConstant:
+//            8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
+//
+//        bioTextView.anchor(userNameLabel.bottomAnchor, left: profileImageView.rightAnchor, bottom: nil, right: self.rightAnchor, topConstant: 8, leftConstant:
+//            8, bottomConstant: 0, rightConstant: 12, widthConstant: 0, heightConstant: 50)
+//
+//        followButton.anchor(self.topAnchor, left: nil, bottom: bioTextView.topAnchor, right: self.rightAnchor, topConstant: 12, leftConstant:
+//            0, bottomConstant: 12, rightConstant: 12, widthConstant: 120, heightConstant: 34)
         
     }
 }
