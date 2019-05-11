@@ -28,7 +28,17 @@ class HomeDatasourceController: DatasourceController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 160)
+        
+        if let user = self.datasource?.item(indexPath) as? User {
+            
+            let approximateWIthBioTextView = view.frame.width - 12 - 50 - 8
+            let size = CGSize(width: approximateWIthBioTextView, height: 1000)
+            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes:
+                [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], context: nil)
+            return CGSize(width: view.frame.width, height: estimatedFrame.height + 66)
+        }
+        
+        return CGSize(width: view.frame.width, height: 1000)
 
     }
     

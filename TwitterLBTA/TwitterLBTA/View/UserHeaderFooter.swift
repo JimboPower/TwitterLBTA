@@ -49,4 +49,3 @@ class UserFooter: DatasourceCell {
         showMoreLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
 }
-
