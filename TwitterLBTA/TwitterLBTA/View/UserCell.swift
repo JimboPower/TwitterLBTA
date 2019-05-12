@@ -53,6 +53,7 @@ class UserCell: DatasourceCell {
     
     let followButton: UIButton = {
         let button = UIButton()
+        let image = #imageLiteral(resourceName: "follow")
         button.layer.cornerRadius = 5
         button.layer.masksToBounds = true
         button.layer.borderColor = UIColor.cyan.cgColor
@@ -61,6 +62,8 @@ class UserCell: DatasourceCell {
         let twitterBlue = UIColor(r: 61, g: 167, b: 244)
         button.setTitleColor(twitterBlue, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.setImage(image, for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
         return button
     }()
     
@@ -122,8 +125,8 @@ class UserCell: DatasourceCell {
         userNameLabel.anchor(nameLabel.bottomAnchor, left: profileImageView.rightAnchor, bottom: nil, right: nameLabel.rightAnchor, topConstant: 3, leftConstant:
             8, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
         
-        bioTextView.anchor(userNameLabel.bottomAnchor, left: profileImageView.rightAnchor, bottom: bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant:
-            0, bottomConstant: -7, rightConstant: 12, widthConstant: 0, heightConstant: 0)
+        bioTextView.anchor(userNameLabel.bottomAnchor, left: profileImageView.rightAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant:
+            0, bottomConstant: 10, rightConstant: 12, widthConstant: 0, heightConstant: 0)
         
         followButton.anchor(self.topAnchor, left: nil, bottom: bioTextView.topAnchor, right: self.rightAnchor, topConstant: 12, leftConstant:
             0, bottomConstant: 12, rightConstant: 12, widthConstant: 120, heightConstant: 34)

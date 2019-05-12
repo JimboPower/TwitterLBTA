@@ -12,8 +12,8 @@ class HomeDatasource: Datasource {
     
     let users: [User] = {
         let edoUser = User(name: "Edoardo", username: "@edoardo", bioText: "iPhone, iPad, iOS Programming Commiunity. Join us to learn Swift, Objective-C", profileImage: #imageLiteral(resourceName: "Foto Edoardo de Cal"))
-        let giuliaUser = User(name: "Giulia", username: "@giulia", bioText: "I am really good at cooking guys ahhha", profileImage:  #imageLiteral(resourceName: "IMG_5294"))
-        let markUser = User(name: "Mark", username: "@zuck", bioText: "I am a bilionare guy lol, I am a bilionare guy lol, I am a bilionare guy lol, I am a bilionare guy lol, I am a bilionare guy lol", profileImage: #imageLiteral(resourceName: "IMG_5294"))
+        let giuliaUser = User(name: "Brian", username: "@letsbuildthatapp", bioText: "I am really good at cooking guys ahhha", profileImage:  #imageLiteral(resourceName: "profile_image"))
+        let markUser = User(name: "Mark", username: "@zuck", bioText: "I am a bilionare guy lol, I am a bilionare guy lol, I am a bilionare guy lol, I am a bilionare guy lol, I am a bilionare guy lol", profileImage: #imageLiteral(resourceName: "ray_profile_image"))
         return [edoUser, giuliaUser, markUser]
     }()
     
