@@ -48,6 +48,7 @@ class UserCell: DatasourceCell {
         let textView = UITextView()
         textView.text = "iPhone, iPad, iOS Programming Commiunity. Join us to learn Swift, Objective-C"
         textView.font = UIFont.systemFont(ofSize: 15)
+        textView.isScrollEnabled = false
         return textView
     }()
     
@@ -106,6 +107,8 @@ class UserCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        
+        backgroundColor = .white
         
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)

@@ -20,10 +20,11 @@ class UserHeader: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        backgroundColor = .white
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
         addSubview(textLabel)
-        textLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
+        textLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 14).isActive = true
         textLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         textLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
@@ -43,9 +44,19 @@ class UserFooter: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        
+        let backgroundWhiteBlue = UIView()
+        backgroundWhiteBlue.backgroundColor = .white
+        
+        addSubview(backgroundWhiteBlue)
+        backgroundWhiteBlue.translatesAutoresizingMaskIntoConstraints = false
+        backgroundWhiteBlue.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
+        backgroundWhiteBlue.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
+        backgroundWhiteBlue.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+        backgroundWhiteBlue.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15).isActive = true
+        
         addSubview(showMoreLabel)
         showMoreLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
-        showMoreLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        showMoreLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        showMoreLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 14).isActive = true
     }
 }
