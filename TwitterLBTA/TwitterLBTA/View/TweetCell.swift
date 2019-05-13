@@ -10,10 +10,25 @@ import LBTAComponents
 
 class TweetCell: DatasourceCell {
     
+    override var datasourceItem: Any? {
+        didSet{
+            guard let tweet = datasourceItem as? Tweet else {return}
+            
+            let attributedText = NSMutableAttributedString(string: tweet.user.name, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)])
+            
+            let usernameString = " \(tweet.user.username)"
+            
+            attributedText.append(NSMutableAttributedString(string: usernameString, attributes:  [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+            
+            messageTextView.attributedText = attributedText
+        }
+    }
+    
+    
     let messageTextView: UITextView = {
         let textView = UITextView()
         textView.text = "Some text text text text text text text"
-        textView.backgroundColor = .red
+        textView.backgroundColor = .yellow
         textView.translatesAutoresizingMaskIntoConstraints = false
 
         return textView
@@ -65,10 +80,10 @@ class TweetCell: DatasourceCell {
         super.setupViews()
         
         addSubview(tweetImage)
-        
+        addSubview(messageTextView)
         tweetImage.anchor(self.topAnchor, left: self.leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
+        messageTextView.anchor(self.topAnchor, left: tweetImage.rightAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
         
-
         
         backgroundColor = .white
         separatorLineView.isHidden = false

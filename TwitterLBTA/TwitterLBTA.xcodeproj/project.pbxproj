@@ -10,6 +10,7 @@
 		1122AD3422872939002379A1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1122AD3322872939002379A1 /* UserCell.swift */; };
 		1122AD36228845E0002379A1 /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1122AD35228845E0002379A1 /* HomeDatasourceController+navbar.swift */; };
 		1122AD3822887A93002379A1 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1122AD3722887A93002379A1 /* TweetCell.swift */; };
+		1122AD3A2289EFF2002379A1 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1122AD392289EFF2002379A1 /* Tweet.swift */; };
 		11DD18C02280993100CEFC2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD18BF2280993100CEFC2F /* AppDelegate.swift */; };
 		11DD18C72280993F00CEFC2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11DD18C62280993F00CEFC2F /* Assets.xcassets */; };
 		11DD18CA2280993F00CEFC2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11DD18C82280993F00CEFC2F /* LaunchScreen.storyboard */; };
@@ -25,6 +26,7 @@
 		1122AD3322872939002379A1 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		1122AD35228845E0002379A1 /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
 		1122AD3722887A93002379A1 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		1122AD392289EFF2002379A1 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		11DD18BC2280993100CEFC2F /* TwitterLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11DD18BF2280993100CEFC2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11DD18C62280993F00CEFC2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				11DD18DA22834C8000CEFC2F /* HomeDatasource.swift */,
 				11DD18DC22862E7900CEFC2F /* User.swift */,
+				1122AD392289EFF2002379A1 /* Tweet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11DD18DB22834C8000CEFC2F /* HomeDatasource.swift in Sources */,
+				1122AD3A2289EFF2002379A1 /* Tweet.swift in Sources */,
 				11DD18C02280993100CEFC2F /* AppDelegate.swift in Sources */,
 				11DD18DD22862E7900CEFC2F /* User.swift in Sources */,
 				1122AD3822887A93002379A1 /* TweetCell.swift in Sources */,

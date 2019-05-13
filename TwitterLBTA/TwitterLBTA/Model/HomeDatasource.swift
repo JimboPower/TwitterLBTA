@@ -17,7 +17,14 @@ class HomeDatasource: Datasource {
         return [edoUser, giuliaUser, markUser]
     }()
     
-    let tweets = ["Tweet1", "Tweet2"]
+    let tweets: [Tweet] = {
+        let edoUser = User(name: "Edoardo", username: "@edoardo", bioText: "iPhone, iPad, iOS Programming Commiunity. Join us to learn Swift, Objective-C", profileImage: #imageLiteral(resourceName: "Foto Edoardo de Cal"))
+        
+        let tweet1 = Tweet(user: edoUser, message: "Edoardo e un figo pazzesco!")
+        let tweet2 = Tweet(user: edoUser, message: "Edoardo è un pazzo furioso!")
+
+        return [tweet1, tweet2]
+    }()
     
     
     override func cellClasses() -> [DatasourceCell.Type] {
@@ -33,6 +40,9 @@ class HomeDatasource: Datasource {
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
+        if indexPath.section == 1 {
+            return tweets[indexPath.item]
+        }
         return users[indexPath.item]
     }
     
