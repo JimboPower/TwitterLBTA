@@ -16,11 +16,11 @@ extension HomeDatasourceController {
     
     
     func setUpReimainingNavItems() {
-        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "Twitter_Logo_Blue"))
-        titleImageView.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        let titleImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 40))
+        titleImageView.image = #imageLiteral(resourceName: "Twitter_Logo_Blue")
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView  = titleImageView
-        
+
         navigationController?.navigationBar.backgroundColor = .white
         navigationController?.navigationBar.isTranslucent = false
         

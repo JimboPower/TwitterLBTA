@@ -1,16 +1,31 @@
 PODS:
+  - Alamofire (5.0.0-beta.6)
   - LBTAComponents (1.0.2)
+  - RxSwift (5.0.0)
+  - TRON/Core (5.0.0-beta.3):
+    - Alamofire (~> 5.0.0-beta.6)
+  - TRON/RxSwift (5.0.0-beta.3):
+    - Alamofire (~> 5.0.0-beta.6)
+    - RxSwift (~> 5.0)
+    - TRON/Core
 
 DEPENDENCIES:
   - LBTAComponents
+  - TRON/RxSwift (~> 5.0.0-beta.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - LBTAComponents
+    - RxSwift
+    - TRON
 
 SPEC CHECKSUMS:
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
   LBTAComponents: c4c8863e0ef6715e378300db148b96a09df656f7
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  TRON: 7c5799d97229a9bfeba3e609f0871476deefac4b
 
-PODFILE CHECKSUM: c26e3dc7347e1fc07e94ab7d0dfb4933dcd215ff
+PODFILE CHECKSUM: c26ab2685d7341379c7548aaddc977817d847b5e
 
 COCOAPODS: 1.5.3

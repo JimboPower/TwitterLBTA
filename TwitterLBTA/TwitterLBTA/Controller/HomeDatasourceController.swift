@@ -7,7 +7,7 @@
 //
 
 import LBTAComponents
-
+import RxSwift
 
 class HomeDatasourceController: DatasourceController {
     
@@ -19,8 +19,12 @@ class HomeDatasourceController: DatasourceController {
         let homeDatasource = HomeDatasource()
         self.datasource = homeDatasource
         
+        fetchHomeFeed()
     }
     
+    fileprivate func fetchHomeFeed() {
+        
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if section == 1 {
